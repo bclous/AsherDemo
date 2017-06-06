@@ -8,22 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		AB5FD2411EE7407000AC2A9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2401EE7407000AC2A9D /* AppDelegate.swift */; };
-		AB5FD2431EE7407000AC2A9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2421EE7407000AC2A9D /* ViewController.swift */; };
+		AB5FD2431EE7407000AC2A9D /* ProviderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2421EE7407000AC2A9D /* ProviderVC.swift */; };
 		AB5FD2461EE7407000AC2A9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5FD2441EE7407000AC2A9D /* Main.storyboard */; };
 		AB5FD2491EE7407000AC2A9D /* AsherDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2471EE7407000AC2A9D /* AsherDemo.xcdatamodeld */; };
 		AB5FD24B1EE7407000AC2A9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5FD24A1EE7407000AC2A9D /* Assets.xcassets */; };
 		AB5FD24E1EE7407000AC2A9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5FD24C1EE7407000AC2A9D /* LaunchScreen.storyboard */; };
+		AB5FD2561EE7411100AC2A9D /* ClientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2551EE7411100AC2A9D /* ClientVC.swift */; };
+		AB5FD2581EE7412100AC2A9D /* WorkoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2571EE7412100AC2A9D /* WorkoutVC.swift */; };
+		AB5FD25A1EE7417100AC2A9D /* ExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2591EE7417100AC2A9D /* ExerciseVC.swift */; };
+		AB5FD25C1EE741A500AC2A9D /* FeelingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD25B1EE741A500AC2A9D /* FeelingsVC.swift */; };
+		AB5FD25E1EE7437700AC2A9D /* ClientGenericCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD25D1EE7437700AC2A9D /* ClientGenericCell.swift */; };
+		AB5FD2601EE74B6A00AC2A9D /* ClientDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5FD25F1EE74B6A00AC2A9D /* ClientDetailCell.xib */; };
+		AB5FD2621EE74BD800AC2A9D /* ClientDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2611EE74BD800AC2A9D /* ClientDetailCell.swift */; };
+		AB5FD2651EE74CA300AC2A9D /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2631EE74CA300AC2A9D /* WorkoutCell.swift */; };
+		AB5FD2661EE74CA300AC2A9D /* WorkoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5FD2641EE74CA300AC2A9D /* WorkoutCell.xib */; };
+		AB5FD2691EE74CEC00AC2A9D /* PastWorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2671EE74CEC00AC2A9D /* PastWorkoutCell.swift */; };
+		AB5FD26A1EE74CEC00AC2A9D /* PastWorkoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5FD2681EE74CEC00AC2A9D /* PastWorkoutCell.xib */; };
+		AB5FD26F1EE7542300AC2A9D /* IndividiualWorkoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD26E1EE7542300AC2A9D /* IndividiualWorkoutVC.swift */; };
+		AB5FD2711EE7550000AC2A9D /* WorkoutFinishedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2701EE7550000AC2A9D /* WorkoutFinishedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB5FD23D1EE7407000AC2A9D /* AsherDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsherDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5FD2401EE7407000AC2A9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB5FD2421EE7407000AC2A9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB5FD2421EE7407000AC2A9D /* ProviderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderVC.swift; sourceTree = "<group>"; };
 		AB5FD2451EE7407000AC2A9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB5FD2481EE7407000AC2A9D /* AsherDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AsherDemo.xcdatamodel; sourceTree = "<group>"; };
 		AB5FD24A1EE7407000AC2A9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB5FD24D1EE7407000AC2A9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB5FD24F1EE7407000AC2A9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB5FD2551EE7411100AC2A9D /* ClientVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientVC.swift; sourceTree = "<group>"; };
+		AB5FD2571EE7412100AC2A9D /* WorkoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutVC.swift; sourceTree = "<group>"; };
+		AB5FD2591EE7417100AC2A9D /* ExerciseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseVC.swift; sourceTree = "<group>"; };
+		AB5FD25B1EE741A500AC2A9D /* FeelingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeelingsVC.swift; sourceTree = "<group>"; };
+		AB5FD25D1EE7437700AC2A9D /* ClientGenericCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientGenericCell.swift; sourceTree = "<group>"; };
+		AB5FD25F1EE74B6A00AC2A9D /* ClientDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClientDetailCell.xib; sourceTree = "<group>"; };
+		AB5FD2611EE74BD800AC2A9D /* ClientDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientDetailCell.swift; sourceTree = "<group>"; };
+		AB5FD2631EE74CA300AC2A9D /* WorkoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
+		AB5FD2641EE74CA300AC2A9D /* WorkoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkoutCell.xib; sourceTree = "<group>"; };
+		AB5FD2671EE74CEC00AC2A9D /* PastWorkoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastWorkoutCell.swift; sourceTree = "<group>"; };
+		AB5FD2681EE74CEC00AC2A9D /* PastWorkoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PastWorkoutCell.xib; sourceTree = "<group>"; };
+		AB5FD26E1EE7542300AC2A9D /* IndividiualWorkoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndividiualWorkoutVC.swift; sourceTree = "<group>"; };
+		AB5FD2701EE7550000AC2A9D /* WorkoutFinishedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutFinishedVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +83,51 @@
 			isa = PBXGroup;
 			children = (
 				AB5FD2401EE7407000AC2A9D /* AppDelegate.swift */,
-				AB5FD2421EE7407000AC2A9D /* ViewController.swift */,
 				AB5FD2441EE7407000AC2A9D /* Main.storyboard */,
+				AB5FD26B1EE74D3100AC2A9D /* View Controllers */,
 				AB5FD24A1EE7407000AC2A9D /* Assets.xcassets */,
 				AB5FD24C1EE7407000AC2A9D /* LaunchScreen.storyboard */,
 				AB5FD24F1EE7407000AC2A9D /* Info.plist */,
 				AB5FD2471EE7407000AC2A9D /* AsherDemo.xcdatamodeld */,
 			);
 			path = AsherDemo;
+			sourceTree = "<group>";
+		};
+		AB5FD26B1EE74D3100AC2A9D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB5FD2421EE7407000AC2A9D /* ProviderVC.swift */,
+				AB5FD26E1EE7542300AC2A9D /* IndividiualWorkoutVC.swift */,
+				AB5FD25D1EE7437700AC2A9D /* ClientGenericCell.swift */,
+				AB5FD26D1EE74DB400AC2A9D /* ClientVC */,
+				AB5FD2571EE7412100AC2A9D /* WorkoutVC.swift */,
+				AB5FD25B1EE741A500AC2A9D /* FeelingsVC.swift */,
+				AB5FD2701EE7550000AC2A9D /* WorkoutFinishedVC.swift */,
+				AB5FD2591EE7417100AC2A9D /* ExerciseVC.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AB5FD26C1EE74D9900AC2A9D /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AB5FD25F1EE74B6A00AC2A9D /* ClientDetailCell.xib */,
+				AB5FD2611EE74BD800AC2A9D /* ClientDetailCell.swift */,
+				AB5FD2631EE74CA300AC2A9D /* WorkoutCell.swift */,
+				AB5FD2641EE74CA300AC2A9D /* WorkoutCell.xib */,
+				AB5FD2671EE74CEC00AC2A9D /* PastWorkoutCell.swift */,
+				AB5FD2681EE74CEC00AC2A9D /* PastWorkoutCell.xib */,
+			);
+			name = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		AB5FD26D1EE74DB400AC2A9D /* ClientVC */ = {
+			isa = PBXGroup;
+			children = (
+				AB5FD2551EE7411100AC2A9D /* ClientVC.swift */,
+				AB5FD26C1EE74D9900AC2A9D /* Table View Cells */,
+			);
+			name = ClientVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +193,9 @@
 				AB5FD24E1EE7407000AC2A9D /* LaunchScreen.storyboard in Resources */,
 				AB5FD24B1EE7407000AC2A9D /* Assets.xcassets in Resources */,
 				AB5FD2461EE7407000AC2A9D /* Main.storyboard in Resources */,
+				AB5FD2661EE74CA300AC2A9D /* WorkoutCell.xib in Resources */,
+				AB5FD2601EE74B6A00AC2A9D /* ClientDetailCell.xib in Resources */,
+				AB5FD26A1EE74CEC00AC2A9D /* PastWorkoutCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,9 +206,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB5FD2431EE7407000AC2A9D /* ViewController.swift in Sources */,
+				AB5FD25A1EE7417100AC2A9D /* ExerciseVC.swift in Sources */,
+				AB5FD2651EE74CA300AC2A9D /* WorkoutCell.swift in Sources */,
+				AB5FD2431EE7407000AC2A9D /* ProviderVC.swift in Sources */,
+				AB5FD26F1EE7542300AC2A9D /* IndividiualWorkoutVC.swift in Sources */,
+				AB5FD2561EE7411100AC2A9D /* ClientVC.swift in Sources */,
+				AB5FD2621EE74BD800AC2A9D /* ClientDetailCell.swift in Sources */,
 				AB5FD2491EE7407000AC2A9D /* AsherDemo.xcdatamodeld in Sources */,
+				AB5FD2581EE7412100AC2A9D /* WorkoutVC.swift in Sources */,
+				AB5FD2711EE7550000AC2A9D /* WorkoutFinishedVC.swift in Sources */,
+				AB5FD2691EE74CEC00AC2A9D /* PastWorkoutCell.swift in Sources */,
 				AB5FD2411EE7407000AC2A9D /* AppDelegate.swift in Sources */,
+				AB5FD25E1EE7437700AC2A9D /* ClientGenericCell.swift in Sources */,
+				AB5FD25C1EE741A500AC2A9D /* FeelingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
