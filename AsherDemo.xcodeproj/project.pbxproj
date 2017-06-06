@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB5FD2411EE7407000AC2A9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2401EE7407000AC2A9D /* AppDelegate.swift */; };
+		AB5FD2431EE7407000AC2A9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2421EE7407000AC2A9D /* ViewController.swift */; };
+		AB5FD2461EE7407000AC2A9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5FD2441EE7407000AC2A9D /* Main.storyboard */; };
+		AB5FD2491EE7407000AC2A9D /* AsherDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2471EE7407000AC2A9D /* AsherDemo.xcdatamodeld */; };
+		AB5FD24B1EE7407000AC2A9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5FD24A1EE7407000AC2A9D /* Assets.xcassets */; };
+		AB5FD24E1EE7407000AC2A9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5FD24C1EE7407000AC2A9D /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AB5FD23D1EE7407000AC2A9D /* AsherDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsherDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB5FD2401EE7407000AC2A9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AB5FD2421EE7407000AC2A9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB5FD2451EE7407000AC2A9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB5FD2481EE7407000AC2A9D /* AsherDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AsherDemo.xcdatamodel; sourceTree = "<group>"; };
+		AB5FD24A1EE7407000AC2A9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB5FD24D1EE7407000AC2A9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AB5FD24F1EE7407000AC2A9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB5FD23A1EE7407000AC2A9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB5FD2341EE7407000AC2A9D = {
+			isa = PBXGroup;
+			children = (
+				AB5FD23F1EE7407000AC2A9D /* AsherDemo */,
+				AB5FD23E1EE7407000AC2A9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB5FD23E1EE7407000AC2A9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB5FD23D1EE7407000AC2A9D /* AsherDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB5FD23F1EE7407000AC2A9D /* AsherDemo */ = {
+			isa = PBXGroup;
+			children = (
+				AB5FD2401EE7407000AC2A9D /* AppDelegate.swift */,
+				AB5FD2421EE7407000AC2A9D /* ViewController.swift */,
+				AB5FD2441EE7407000AC2A9D /* Main.storyboard */,
+				AB5FD24A1EE7407000AC2A9D /* Assets.xcassets */,
+				AB5FD24C1EE7407000AC2A9D /* LaunchScreen.storyboard */,
+				AB5FD24F1EE7407000AC2A9D /* Info.plist */,
+				AB5FD2471EE7407000AC2A9D /* AsherDemo.xcdatamodeld */,
+			);
+			path = AsherDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB5FD23C1EE7407000AC2A9D /* AsherDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB5FD2521EE7407000AC2A9D /* Build configuration list for PBXNativeTarget "AsherDemo" */;
+			buildPhases = (
+				AB5FD2391EE7407000AC2A9D /* Sources */,
+				AB5FD23A1EE7407000AC2A9D /* Frameworks */,
+				AB5FD23B1EE7407000AC2A9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AsherDemo;
+			productName = AsherDemo;
+			productReference = AB5FD23D1EE7407000AC2A9D /* AsherDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB5FD2351EE7407000AC2A9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Clouser;
+				TargetAttributes = {
+					AB5FD23C1EE7407000AC2A9D = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = WGMLG78T9W;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AB5FD2381EE7407000AC2A9D /* Build configuration list for PBXProject "AsherDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB5FD2341EE7407000AC2A9D;
+			productRefGroup = AB5FD23E1EE7407000AC2A9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB5FD23C1EE7407000AC2A9D /* AsherDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB5FD23B1EE7407000AC2A9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB5FD24E1EE7407000AC2A9D /* LaunchScreen.storyboard in Resources */,
+				AB5FD24B1EE7407000AC2A9D /* Assets.xcassets in Resources */,
+				AB5FD2461EE7407000AC2A9D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB5FD2391EE7407000AC2A9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB5FD2431EE7407000AC2A9D /* ViewController.swift in Sources */,
+				AB5FD2491EE7407000AC2A9D /* AsherDemo.xcdatamodeld in Sources */,
+				AB5FD2411EE7407000AC2A9D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AB5FD2441EE7407000AC2A9D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB5FD2451EE7407000AC2A9D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AB5FD24C1EE7407000AC2A9D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB5FD24D1EE7407000AC2A9D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB5FD2501EE7407000AC2A9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB5FD2511EE7407000AC2A9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB5FD2531EE7407000AC2A9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WGMLG78T9W;
+				INFOPLIST_FILE = AsherDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clouser-theQwiz.AsherDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AB5FD2541EE7407000AC2A9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WGMLG78T9W;
+				INFOPLIST_FILE = AsherDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.clouser-theQwiz.AsherDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB5FD2381EE7407000AC2A9D /* Build configuration list for PBXProject "AsherDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB5FD2501EE7407000AC2A9D /* Debug */,
+				AB5FD2511EE7407000AC2A9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB5FD2521EE7407000AC2A9D /* Build configuration list for PBXNativeTarget "AsherDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB5FD2531EE7407000AC2A9D /* Debug */,
+				AB5FD2541EE7407000AC2A9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AB5FD2471EE7407000AC2A9D /* AsherDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AB5FD2481EE7407000AC2A9D /* AsherDemo.xcdatamodel */,
+			);
+			currentVersion = AB5FD2481EE7407000AC2A9D /* AsherDemo.xcdatamodel */;
+			path = AsherDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AB5FD2351EE7407000AC2A9D /* Project object */;
+}
