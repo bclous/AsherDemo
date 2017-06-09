@@ -13,13 +13,17 @@
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="DrB-lL-9bh"/>
                 <outlet property="leftArrowImage" destination="yDx-Um-ive" id="hmy-GH-7wc"/>
+                <outlet property="leftButton" destination="GG9-9M-GPt" id="w8l-MQ-Cfh"/>
+                <outlet property="leftConstraint" destination="br2-3j-Ana" id="dm7-CY-CDy"/>
                 <outlet property="masterScrollView" destination="AdN-Aq-YfU" id="RgH-Dp-me6"/>
                 <outlet property="rightArrowImage" destination="iWu-Ng-Iha" id="H7e-8H-yRp"/>
+                <outlet property="rightButton" destination="gwk-wA-UdG" id="tJZ-9F-ESk"/>
+                <outlet property="rightConstraint" destination="phH-Sb-qkm" id="3JC-wB-z81"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+            <rect key="frame" x="0.0" y="0.0" width="373" height="151"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yDx-Um-ive">
@@ -30,7 +34,7 @@
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iWu-Ng-Iha">
-                    <rect key="frame" x="348" y="63" width="25" height="25"/>
+                    <rect key="frame" x="346" y="63" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="AgJ-JQ-JJv"/>
                         <constraint firstAttribute="width" constant="25" id="RjB-xP-ax4"/>
@@ -43,13 +47,13 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwk-wA-UdG">
-                    <rect key="frame" x="343" y="42.5" width="35" height="65"/>
+                    <rect key="frame" x="341" y="42.5" width="35" height="65"/>
                     <connections>
                         <action selector="rightButtonTapped:" destination="-1" eventType="touchUpInside" id="Aps-AK-wjg"/>
                     </connections>
                 </button>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AdN-Aq-YfU">
-                    <rect key="frame" x="20" y="0.0" width="335" height="151"/>
+                    <rect key="frame" x="20" y="0.0" width="333" height="151"/>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -72,7 +76,7 @@
                 <constraint firstItem="yDx-Um-ive" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yM4-4M-2tl"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-355" y="-396"/>
+            <point key="canvasLocation" x="-356.5" y="-396.5"/>
         </view>
     </objects>
 </document>

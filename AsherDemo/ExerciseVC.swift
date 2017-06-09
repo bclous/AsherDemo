@@ -14,13 +14,20 @@ protocol ExerciseVCDelegate : class {
 
 class ExerciseVC: UIViewController {
     
-    var exercise : ExerciseSet?
+    var exercise : Exercise?
     weak var delegate : ExerciseVCDelegate?
+    
+    @IBOutlet weak var nextExerciseButton: UIButton!
+    @IBOutlet weak var controlView: ExerciseSetControlMasterView!
+    @IBOutlet weak var tipsView: ExerciseTipsView!
+    var orderInWorkout = 1
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        controlView.delegate = self
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -29,11 +36,18 @@ class ExerciseVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func formatExerciseVC() {
-        if let exercise = exercise {
-            // do the stuff here
-        }
+    func formatExerciseVCWithExercise(_ exercise: Exercise) {
+        self.exercise = exercise
+        controlView.formatMasterViewForExercise(exercise, frameWidth: view.frame.width)
+        tipsView.formatTipViewFor(exercise: exercise)
+        orderInWorkout = exercise.orderInWorkout
+
     }
+    
+    @IBAction func nextExerciseButtonTapped(_ sender: Any) {
+        delegate?.exerciseFinishedTapped(orderInWorkout)
+    }
+    
     
 
     /*

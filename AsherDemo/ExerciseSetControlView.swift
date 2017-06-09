@@ -21,6 +21,8 @@ class ExerciseSetControlView: UIView {
     @IBOutlet weak var startStopButton: UIButton!
     let timer = Timer()
     var counter : Int = 0
+    var numberOfReps = 0
+    
     
     var exerciseSet : ExerciseSet?
     
@@ -50,13 +52,39 @@ class ExerciseSetControlView: UIView {
         exerciseSet = exercise
         if let exerciseSet = exerciseSet {
             
-            // do stuff here
+            slider.alpha = exerciseSet.isReps ? 1 : 0
+            resetButton.alpha = exerciseSet.isReps ? 0 : 1
+            startStopButton.alpha = exerciseSet.isReps ? 0 : 1
+            thisSetLabel.text = "THIS SET:"
+            thisSetDescriptionLabel.text = exerciseSet.userTitleHint
+            timeOrRepsLabel.text = exerciseSet.isReps ? "0" : "0:00"
+            
+            if exerciseSet.isLeftSide {
+                leftOrRightOrTimeOrRepsLabel.text = "L:"
+            } else if exerciseSet.isRightSide {
+                leftOrRightOrTimeOrRepsLabel.text = "R:"
+            } else {
+                leftOrRightOrTimeOrRepsLabel.text = exerciseSet.isReps ? "REPS:" : "TIME:"
+            }
+            
+            yourBestAmountLabel.text = exerciseSet.isReps ? "15" : "0:15"
             
         }
 
     }
     
     public func saveValuesToExerciseSet() {
+        // save to core data
+        
+        if let exerciseSet = exerciseSet {
+            if exerciseSet.isReps {
+                exerciseSet.repsCompleted = Int64(numberOfReps)
+            } else {
+                exerciseSet.timeCompleted = Int64(counter)
+            }
+        }
+        
+        // save context
         
     }
 

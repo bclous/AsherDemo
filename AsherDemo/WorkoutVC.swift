@@ -27,7 +27,7 @@ class WorkoutVC: UIViewController {
     let workoutFinishedVC : WorkoutFinishedVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "workoutFinishedVC") as! WorkoutFinishedVC
     
     var workout : Workout?
-    var exercises : [ExerciseSet] = []
+    var exercises : [Exercise] = []
     var screenWidth : CGFloat = 375
     
     override func viewDidLoad() {
@@ -47,23 +47,17 @@ class WorkoutVC: UIViewController {
     }
     
     func getExercises(workout: Workout) {
-        if let workoutExercises = workout.exerciseSets?.allObjects {
-            exercises = workoutExercises as! [ExerciseSet]
+        if let workoutExercises = workout.exercises?.allObjects {
+          
         }
     }
     
     func formatExerciseVCs() {
         if exercises.count >= 4 {
-            exercise1VC.exercise = exercises[0]
-            exercise2VC.exercise = exercises[1]
-            exercise3VC.exercise = exercises[2]
-            exercise4VC.exercise = exercises[3]
-            
-            exercise1VC.formatExerciseVC()
-            exercise2VC.formatExerciseVC()
-            exercise3VC.formatExerciseVC()
-            exercise4VC.formatExerciseVC()
-            
+            exercise1VC.formatExerciseVCWithExercise(exercises[0])
+            exercise2VC.formatExerciseVCWithExercise(exercises[1])
+            exercise3VC.formatExerciseVCWithExercise(exercises[2])
+            exercise4VC.formatExerciseVCWithExercise(exercises[3])
             exercise1VC.delegate = self
             exercise2VC.delegate = self
             exercise3VC.delegate = self

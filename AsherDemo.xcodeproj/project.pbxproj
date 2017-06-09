@@ -15,6 +15,8 @@
 		AB4183801EE9F34B008E5E7F /* ExerciseSetControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB41837F1EE9F34B008E5E7F /* ExerciseSetControlView.swift */; };
 		AB4183821EE9F8A0008E5E7F /* ExerciseSetControlMasterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB4183811EE9F8A0008E5E7F /* ExerciseSetControlMasterView.xib */; };
 		AB4183841EEB02ED008E5E7F /* ExerciseSetControlMasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4183831EEB02ED008E5E7F /* ExerciseSetControlMasterView.swift */; };
+		AB41839A1EEB1962008E5E7F /* ExerciseTipsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB4183991EEB1962008E5E7F /* ExerciseTipsView.xib */; };
+		AB41839C1EEB1A41008E5E7F /* ExerciseTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB41839B1EEB1A41008E5E7F /* ExerciseTipsView.swift */; };
 		AB5FD2411EE7407000AC2A9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2401EE7407000AC2A9D /* AppDelegate.swift */; };
 		AB5FD2431EE7407000AC2A9D /* ProviderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2421EE7407000AC2A9D /* ProviderVC.swift */; };
 		AB5FD2461EE7407000AC2A9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5FD2441EE7407000AC2A9D /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		AB41837F1EE9F34B008E5E7F /* ExerciseSetControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSetControlView.swift; sourceTree = "<group>"; };
 		AB4183811EE9F8A0008E5E7F /* ExerciseSetControlMasterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseSetControlMasterView.xib; sourceTree = "<group>"; };
 		AB4183831EEB02ED008E5E7F /* ExerciseSetControlMasterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSetControlMasterView.swift; sourceTree = "<group>"; };
+		AB4183991EEB1962008E5E7F /* ExerciseTipsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseTipsView.xib; sourceTree = "<group>"; };
+		AB41839B1EEB1A41008E5E7F /* ExerciseTipsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseTipsView.swift; sourceTree = "<group>"; };
 		AB5FD23D1EE7407000AC2A9D /* AsherDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsherDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5FD2401EE7407000AC2A9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB5FD2421EE7407000AC2A9D /* ProviderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderVC.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				AB4183811EE9F8A0008E5E7F /* ExerciseSetControlMasterView.xib */,
 				AB4183831EEB02ED008E5E7F /* ExerciseSetControlMasterView.swift */,
 				AB41837D1EE9ED5D008E5E7F /* ExerciseSetControlView.xib */,
+				AB4183991EEB1962008E5E7F /* ExerciseTipsView.xib */,
+				AB41839B1EEB1A41008E5E7F /* ExerciseTipsView.swift */,
 				AB41837F1EE9F34B008E5E7F /* ExerciseSetControlView.swift */,
 				AB41837B1EE9BBC0008E5E7F /* StackIndexView.swift */,
 				AB4183791EE9BAEF008E5E7F /* StackIndexView.xib */,
@@ -218,6 +224,7 @@
 				AB5FD24B1EE7407000AC2A9D /* Assets.xcassets in Resources */,
 				AB5FD2461EE7407000AC2A9D /* Main.storyboard in Resources */,
 				AB41837E1EE9ED5D008E5E7F /* ExerciseSetControlView.xib in Resources */,
+				AB41839A1EEB1962008E5E7F /* ExerciseTipsView.xib in Resources */,
 				AB5FD2661EE74CA300AC2A9D /* WorkoutCell.xib in Resources */,
 				AB5FD2601EE74B6A00AC2A9D /* ClientDetailCell.xib in Resources */,
 				AB4183821EE9F8A0008E5E7F /* ExerciseSetControlMasterView.xib in Resources */,
@@ -240,6 +247,7 @@
 				AB5FD2431EE7407000AC2A9D /* ProviderVC.swift in Sources */,
 				AB4183761EE9B980008E5E7F /* StackIndexViewButtonView.swift in Sources */,
 				AB5FD26F1EE7542300AC2A9D /* IndividiualWorkoutVC.swift in Sources */,
+				AB41839C1EEB1A41008E5E7F /* ExerciseTipsView.swift in Sources */,
 				AB5FD2561EE7411100AC2A9D /* ClientVC.swift in Sources */,
 				AB4183801EE9F34B008E5E7F /* ExerciseSetControlView.swift in Sources */,
 				AB5FD2621EE74BD800AC2A9D /* ClientDetailCell.swift in Sources */,

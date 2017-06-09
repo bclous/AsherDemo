@@ -139,8 +139,59 @@
                     <view key="view" contentMode="scaleToFill" id="KNc-Kh-T9v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FhH-0w-6wH" customClass="ExerciseSetControlMasterView" customModule="AsherDemo" customModuleProvider="target">
+                                <rect key="frame" x="-0.5" y="517" width="375" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="vzA-F6-mms"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evf-tI-x0v" customClass="ExerciseTipsView" customModule="AsherDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="337" width="375" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="cjG-Ns-xPr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UbH-pQ-aaC">
+                                <rect key="frame" x="0.0" y="20" width="375" height="317"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azu-Iu-oBd">
+                                <rect key="frame" x="244.5" y="502" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.32549019610000002" green="0.63921568630000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="oih-kX-2Hz"/>
+                                    <constraint firstAttribute="width" constant="100" id="rYm-bL-Gpl"/>
+                                </constraints>
+                                <state key="normal" title="Next Exercise"/>
+                                <connections>
+                                    <action selector="nextExerciseButtonTapped:" destination="aXs-9v-Uq4" eventType="touchUpInside" id="b3b-26-OxM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="evf-tI-x0v" firstAttribute="centerX" secondItem="KNc-Kh-T9v" secondAttribute="centerX" id="09X-H6-eDG"/>
+                            <constraint firstItem="FhH-0w-6wH" firstAttribute="width" secondItem="KNc-Kh-T9v" secondAttribute="width" id="3bc-LA-TZG"/>
+                            <constraint firstItem="evf-tI-x0v" firstAttribute="top" secondItem="UbH-pQ-aaC" secondAttribute="bottom" id="C8v-qW-dTu"/>
+                            <constraint firstItem="fap-4R-Zpj" firstAttribute="top" secondItem="FhH-0w-6wH" secondAttribute="bottom" id="Lyl-C1-Oid"/>
+                            <constraint firstItem="evf-tI-x0v" firstAttribute="width" secondItem="KNc-Kh-T9v" secondAttribute="width" id="UZv-UK-OZy"/>
+                            <constraint firstItem="azu-Iu-oBd" firstAttribute="trailing" secondItem="FhH-0w-6wH" secondAttribute="trailing" constant="-30" id="V5s-GY-jWv"/>
+                            <constraint firstItem="UbH-pQ-aaC" firstAttribute="centerX" secondItem="KNc-Kh-T9v" secondAttribute="centerX" id="bsV-Ti-IRW"/>
+                            <constraint firstItem="FhH-0w-6wH" firstAttribute="centerX" secondItem="KNc-Kh-T9v" secondAttribute="centerX" id="gIf-yk-nIx"/>
+                            <constraint firstItem="FhH-0w-6wH" firstAttribute="top" secondItem="evf-tI-x0v" secondAttribute="bottom" id="oAl-ir-hay"/>
+                            <constraint firstItem="UbH-pQ-aaC" firstAttribute="width" secondItem="KNc-Kh-T9v" secondAttribute="width" id="uho-JQ-bdK"/>
+                            <constraint firstItem="azu-Iu-oBd" firstAttribute="top" secondItem="FhH-0w-6wH" secondAttribute="top" constant="-15" id="xD2-P3-smw"/>
+                            <constraint firstItem="UbH-pQ-aaC" firstAttribute="top" secondItem="gDp-QR-YX9" secondAttribute="bottom" id="yGi-Td-Meg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="controlView" destination="FhH-0w-6wH" id="r8f-aj-xN1"/>
+                        <outlet property="nextExerciseButton" destination="azu-Iu-oBd" id="73m-su-8O0"/>
+                        <outlet property="tipsView" destination="evf-tI-x0v" id="oR1-dw-DWw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOh-VS-SLB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
