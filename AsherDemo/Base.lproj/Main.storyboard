@@ -28,7 +28,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="clientGenericCell" rowHeight="76" id="7PA-7A-gcp" customClass="ClientGenericCell" customModule="AsherDemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="76"/>
+                                        <rect key="frame" x="0.0" y="28" width="376" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7PA-7A-gcp" id="Caj-dr-v6o">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
@@ -144,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOh-VS-SLB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3031" y="1146"/>
+            <point key="canvasLocation" x="2806" y="1155"/>
         </scene>
         <!--Workout FinishedVC-->
         <scene sceneID="26F-as-KO9">
@@ -162,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zi-qa-tXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3710" y="1146"/>
+            <point key="canvasLocation" x="3558" y="1155"/>
         </scene>
         <!--FeelingsVC-->
         <scene sceneID="AWG-fG-n5w">
@@ -180,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyQ-k0-frf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2343" y="1146"/>
+            <point key="canvasLocation" x="2087" y="1146"/>
         </scene>
         <!--Individiual WorkoutVC-->
         <scene sceneID="RsS-hl-bLp">
@@ -269,7 +269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acM-6D-MPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2766" y="440"/>
+            <point key="canvasLocation" x="2785" y="436"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lMK-uV-IIp">

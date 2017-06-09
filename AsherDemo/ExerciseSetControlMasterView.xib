@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExerciseSetControlMasterView" customModule="AsherDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="DrB-lL-9bh"/>
+                <outlet property="leftArrowImage" destination="yDx-Um-ive" id="hmy-GH-7wc"/>
+                <outlet property="masterScrollView" destination="AdN-Aq-YfU" id="RgH-Dp-me6"/>
+                <outlet property="rightArrowImage" destination="iWu-Ng-Iha" id="H7e-8H-yRp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yDx-Um-ive">
+                    <rect key="frame" x="2" y="63" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="VmW-DO-scK"/>
+                        <constraint firstAttribute="height" constant="25" id="ejd-hh-uFA"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iWu-Ng-Iha">
+                    <rect key="frame" x="348" y="63" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="AgJ-JQ-JJv"/>
+                        <constraint firstAttribute="width" constant="25" id="RjB-xP-ax4"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GG9-9M-GPt">
+                    <rect key="frame" x="-3" y="43" width="35" height="65"/>
+                    <connections>
+                        <action selector="leftButtonTapped:" destination="-1" eventType="touchUpInside" id="gHh-oC-rF5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwk-wA-UdG">
+                    <rect key="frame" x="343" y="42.5" width="35" height="65"/>
+                    <connections>
+                        <action selector="rightButtonTapped:" destination="-1" eventType="touchUpInside" id="Aps-AK-wjg"/>
+                    </connections>
+                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AdN-Aq-YfU">
+                    <rect key="frame" x="20" y="0.0" width="335" height="151"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gwk-wA-UdG" firstAttribute="width" secondItem="iWu-Ng-Iha" secondAttribute="width" constant="10" id="4yz-6x-xM1"/>
+                <constraint firstItem="GG9-9M-GPt" firstAttribute="centerY" secondItem="yDx-Um-ive" secondAttribute="centerY" id="AHr-8V-PS4"/>
+                <constraint firstItem="GG9-9M-GPt" firstAttribute="width" secondItem="yDx-Um-ive" secondAttribute="width" constant="10" id="Ag7-Wg-gx8"/>
+                <constraint firstItem="GG9-9M-GPt" firstAttribute="centerX" secondItem="yDx-Um-ive" secondAttribute="centerX" id="Iek-yT-OCU"/>
+                <constraint firstItem="GG9-9M-GPt" firstAttribute="height" secondItem="yDx-Um-ive" secondAttribute="height" constant="40" id="N0F-Kk-hdo"/>
+                <constraint firstItem="iWu-Ng-Iha" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Trc-3q-5hn"/>
+                <constraint firstAttribute="trailing" secondItem="iWu-Ng-Iha" secondAttribute="trailing" constant="2" id="abi-vb-Ehs"/>
+                <constraint firstItem="gwk-wA-UdG" firstAttribute="centerY" secondItem="iWu-Ng-Iha" secondAttribute="centerY" id="bag-D4-sfz"/>
+                <constraint firstItem="AdN-Aq-YfU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="br2-3j-Ana"/>
+                <constraint firstItem="gwk-wA-UdG" firstAttribute="height" secondItem="iWu-Ng-Iha" secondAttribute="height" constant="40" id="dLm-dW-YMZ"/>
+                <constraint firstItem="AdN-Aq-YfU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lGi-Hy-7wE"/>
+                <constraint firstItem="gwk-wA-UdG" firstAttribute="centerX" secondItem="iWu-Ng-Iha" secondAttribute="centerX" id="nQw-0E-vHC"/>
+                <constraint firstAttribute="trailing" secondItem="AdN-Aq-YfU" secondAttribute="trailing" constant="20" id="phH-Sb-qkm"/>
+                <constraint firstItem="yDx-Um-ive" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="vrd-Ql-Aej"/>
+                <constraint firstAttribute="bottom" secondItem="AdN-Aq-YfU" secondAttribute="bottom" id="xft-BT-sA8"/>
+                <constraint firstItem="yDx-Um-ive" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yM4-4M-2tl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-355" y="-396"/>
+        </view>
+    </objects>
+</document>

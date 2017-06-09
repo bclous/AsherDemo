@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB4183761EE9B980008E5E7F /* StackIndexViewButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4183751EE9B980008E5E7F /* StackIndexViewButtonView.swift */; };
+		AB4183781EE9B997008E5E7F /* StackIndexViewButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB4183771EE9B997008E5E7F /* StackIndexViewButtonView.xib */; };
+		AB41837A1EE9BAEF008E5E7F /* StackIndexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB4183791EE9BAEF008E5E7F /* StackIndexView.xib */; };
+		AB41837C1EE9BBC0008E5E7F /* StackIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB41837B1EE9BBC0008E5E7F /* StackIndexView.swift */; };
+		AB41837E1EE9ED5D008E5E7F /* ExerciseSetControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB41837D1EE9ED5D008E5E7F /* ExerciseSetControlView.xib */; };
+		AB4183801EE9F34B008E5E7F /* ExerciseSetControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB41837F1EE9F34B008E5E7F /* ExerciseSetControlView.swift */; };
+		AB4183821EE9F8A0008E5E7F /* ExerciseSetControlMasterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB4183811EE9F8A0008E5E7F /* ExerciseSetControlMasterView.xib */; };
+		AB4183841EEB02ED008E5E7F /* ExerciseSetControlMasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4183831EEB02ED008E5E7F /* ExerciseSetControlMasterView.swift */; };
 		AB5FD2411EE7407000AC2A9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2401EE7407000AC2A9D /* AppDelegate.swift */; };
 		AB5FD2431EE7407000AC2A9D /* ProviderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FD2421EE7407000AC2A9D /* ProviderVC.swift */; };
 		AB5FD2461EE7407000AC2A9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5FD2441EE7407000AC2A9D /* Main.storyboard */; };
@@ -29,6 +37,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB4183751EE9B980008E5E7F /* StackIndexViewButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackIndexViewButtonView.swift; sourceTree = "<group>"; };
+		AB4183771EE9B997008E5E7F /* StackIndexViewButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StackIndexViewButtonView.xib; sourceTree = "<group>"; };
+		AB4183791EE9BAEF008E5E7F /* StackIndexView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StackIndexView.xib; sourceTree = "<group>"; };
+		AB41837B1EE9BBC0008E5E7F /* StackIndexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackIndexView.swift; sourceTree = "<group>"; };
+		AB41837D1EE9ED5D008E5E7F /* ExerciseSetControlView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseSetControlView.xib; sourceTree = "<group>"; };
+		AB41837F1EE9F34B008E5E7F /* ExerciseSetControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSetControlView.swift; sourceTree = "<group>"; };
+		AB4183811EE9F8A0008E5E7F /* ExerciseSetControlMasterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseSetControlMasterView.xib; sourceTree = "<group>"; };
+		AB4183831EEB02ED008E5E7F /* ExerciseSetControlMasterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseSetControlMasterView.swift; sourceTree = "<group>"; };
 		AB5FD23D1EE7407000AC2A9D /* AsherDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsherDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5FD2401EE7407000AC2A9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB5FD2421EE7407000AC2A9D /* ProviderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderVC.swift; sourceTree = "<group>"; };
@@ -104,6 +120,14 @@
 				AB5FD25B1EE741A500AC2A9D /* FeelingsVC.swift */,
 				AB5FD2701EE7550000AC2A9D /* WorkoutFinishedVC.swift */,
 				AB5FD2591EE7417100AC2A9D /* ExerciseVC.swift */,
+				AB4183811EE9F8A0008E5E7F /* ExerciseSetControlMasterView.xib */,
+				AB4183831EEB02ED008E5E7F /* ExerciseSetControlMasterView.swift */,
+				AB41837D1EE9ED5D008E5E7F /* ExerciseSetControlView.xib */,
+				AB41837F1EE9F34B008E5E7F /* ExerciseSetControlView.swift */,
+				AB41837B1EE9BBC0008E5E7F /* StackIndexView.swift */,
+				AB4183791EE9BAEF008E5E7F /* StackIndexView.xib */,
+				AB4183751EE9B980008E5E7F /* StackIndexViewButtonView.swift */,
+				AB4183771EE9B997008E5E7F /* StackIndexViewButtonView.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -193,9 +217,13 @@
 				AB5FD24E1EE7407000AC2A9D /* LaunchScreen.storyboard in Resources */,
 				AB5FD24B1EE7407000AC2A9D /* Assets.xcassets in Resources */,
 				AB5FD2461EE7407000AC2A9D /* Main.storyboard in Resources */,
+				AB41837E1EE9ED5D008E5E7F /* ExerciseSetControlView.xib in Resources */,
 				AB5FD2661EE74CA300AC2A9D /* WorkoutCell.xib in Resources */,
 				AB5FD2601EE74B6A00AC2A9D /* ClientDetailCell.xib in Resources */,
+				AB4183821EE9F8A0008E5E7F /* ExerciseSetControlMasterView.xib in Resources */,
+				AB41837A1EE9BAEF008E5E7F /* StackIndexView.xib in Resources */,
 				AB5FD26A1EE74CEC00AC2A9D /* PastWorkoutCell.xib in Resources */,
+				AB4183781EE9B997008E5E7F /* StackIndexViewButtonView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,11 +234,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB41837C1EE9BBC0008E5E7F /* StackIndexView.swift in Sources */,
 				AB5FD25A1EE7417100AC2A9D /* ExerciseVC.swift in Sources */,
 				AB5FD2651EE74CA300AC2A9D /* WorkoutCell.swift in Sources */,
 				AB5FD2431EE7407000AC2A9D /* ProviderVC.swift in Sources */,
+				AB4183761EE9B980008E5E7F /* StackIndexViewButtonView.swift in Sources */,
 				AB5FD26F1EE7542300AC2A9D /* IndividiualWorkoutVC.swift in Sources */,
 				AB5FD2561EE7411100AC2A9D /* ClientVC.swift in Sources */,
+				AB4183801EE9F34B008E5E7F /* ExerciseSetControlView.swift in Sources */,
 				AB5FD2621EE74BD800AC2A9D /* ClientDetailCell.swift in Sources */,
 				AB5FD2491EE7407000AC2A9D /* AsherDemo.xcdatamodeld in Sources */,
 				AB5FD2581EE7412100AC2A9D /* WorkoutVC.swift in Sources */,
@@ -218,6 +249,7 @@
 				AB5FD2691EE74CEC00AC2A9D /* PastWorkoutCell.swift in Sources */,
 				AB5FD2411EE7407000AC2A9D /* AppDelegate.swift in Sources */,
 				AB5FD25E1EE7437700AC2A9D /* ClientGenericCell.swift in Sources */,
+				AB4183841EEB02ED008E5E7F /* ExerciseSetControlMasterView.swift in Sources */,
 				AB5FD25C1EE741A500AC2A9D /* FeelingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +414,7 @@
 				AB5FD2541EE7407000AC2A9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -5,21 +5,47 @@
         <relationship name="careTaker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="clients" inverseEntity="User" syncable="YES"/>
         <relationship name="workouts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Workout" inverseName="client" inverseEntity="Workout" syncable="YES"/>
     </entity>
+    <entity name="Exercise" representedClassName="Exercise" syncable="YES" codeGenerationType="class">
+        <attribute name="isLeftRight" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isReps" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isTimed" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="numberOfSets" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="suggestedRepsPersSet" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="suggestedTimePerSet" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="tip1" attributeType="String" syncable="YES"/>
+        <attribute name="tip2" attributeType="String" syncable="YES"/>
+        <attribute name="tip3" attributeType="String" syncable="YES"/>
+        <attribute name="tip4" attributeType="String" syncable="YES"/>
+        <attribute name="videoURL" attributeType="String" syncable="YES"/>
+        <relationship name="sets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExerciseSet" inverseName="exercise" inverseEntity="ExerciseSet" syncable="YES"/>
+        <relationship name="workout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="exercises" inverseEntity="Workout" syncable="YES"/>
+    </entity>
     <entity name="ExerciseSet" representedClassName="ExerciseSet" syncable="YES" codeGenerationType="class">
-        <relationship name="workout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="exerciseSets" inverseEntity="Workout" syncable="YES"/>
+        <attribute name="isFullBody" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isLeftSide" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isReps" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isRightSide" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isTimed" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="repsCompleted" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timeCompleted" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userTitleHint" attributeType="String" syncable="YES"/>
+        <relationship name="exercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="sets" inverseEntity="Exercise" syncable="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String" syncable="YES"/>
         <relationship name="clients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Client" inverseName="careTaker" inverseEntity="Client" syncable="YES"/>
     </entity>
     <entity name="Workout" representedClassName="Workout" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="client" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Client" inverseName="workouts" inverseEntity="Client" syncable="YES"/>
-        <relationship name="exerciseSets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExerciseSet" inverseName="workout" inverseEntity="ExerciseSet" syncable="YES"/>
+        <relationship name="exercises" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercise" inverseName="workout" inverseEntity="Exercise" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-281" positionY="-315" width="128" height="73"/>
         <element name="Client" positionX="-117" positionY="-315" width="128" height="88"/>
-        <element name="Workout" positionX="52" positionY="-306" width="128" height="73"/>
-        <element name="ExerciseSet" positionX="232" positionY="-306" width="128" height="58"/>
+        <element name="ExerciseSet" positionX="414" positionY="-279" width="128" height="178"/>
+        <element name="User" positionX="-281" positionY="-315" width="128" height="73"/>
+        <element name="Workout" positionX="52" positionY="-306" width="128" height="88"/>
+        <element name="Exercise" positionX="225" positionY="-297" width="128" height="253"/>
     </elements>
 </model>
