@@ -10,7 +10,7 @@
         <attribute name="isReps" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="isTimed" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
-        <attribute name="numberOfSets" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="numberOfSets" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="orderInWorkout" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="suggestedRepsPersSet" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="suggestedTimePerSet" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -44,7 +44,7 @@
     </entity>
     <elements>
         <element name="Client" positionX="-117" positionY="-315" width="128" height="88"/>
-        <element name="Exercise" positionX="225" positionY="-297" width="128" height="268"/>
+        <element name="Exercise" positionX="225" positionY="-297" width="128" height="270"/>
         <element name="ExerciseSet" positionX="414" positionY="-279" width="128" height="178"/>
         <element name="User" positionX="-281" positionY="-315" width="128" height="73"/>
         <element name="Workout" positionX="52" positionY="-306" width="128" height="88"/>

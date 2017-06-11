@@ -13,6 +13,7 @@ class ClientVC: UIViewController {
     var client : Client?
     @IBOutlet weak var mainTableView: UITableView!
     var clientWorkouts : [Workout] = []
+    var todayWorkout : Workout?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class ClientVC: UIViewController {
         if let client = client {
             if let workouts = client.workouts {
                 clientWorkouts = workouts.allObjects as! [Workout]
+                todayWorkout = clientWorkouts.last
             }
         }
         mainTableView.reloadData()
@@ -29,8 +31,13 @@ class ClientVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "individualWorkoutSegue" {
             let destinationVC = segue.destination as! IndividiualWorkoutVC
+            destinationVC.formatVC(workout: todayWorkout!)
     
         }
+    }
+    @IBAction func tempButtonTapped(_ sender: Any) {
+        
+        performSegue(withIdentifier: "workoutSegue", sender: nil)
     }
   
 }

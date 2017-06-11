@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol FeelingsVCDelegate : class {
+    func tempButtonTapped()
+}
+
 class FeelingsVC: UIViewController {
+    
+    weak var delegate : FeelingsVCDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +27,9 @@ class FeelingsVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func tempButtonTapped(_ sender: Any) {
+        delegate?.tempButtonTapped()
+    }
 
     /*
     // MARK: - Navigation

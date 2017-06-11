@@ -37,10 +37,14 @@ class WorkoutVC: UIViewController {
             formatVC(workout: workout)
             screenWidth = view.frame.width
             formatScrollView()
+            feelingsVC.delegate = self
+            workoutFinishedVC.delegate = self
+            
         }
     }
     
     func formatVC(workout: Workout) {
+        self.workout = workout
         getExercises(workout: workout)
         formatExerciseVCs()
         constrainVCs()
@@ -48,7 +52,7 @@ class WorkoutVC: UIViewController {
     
     func getExercises(workout: Workout) {
         if let workoutExercises = workout.exercises?.allObjects {
-          
+            exercises = workoutExercises as! [Exercise]
         }
     }
     
@@ -99,7 +103,7 @@ class WorkoutVC: UIViewController {
 
 }
 
-extension WorkoutVC : UIScrollViewDelegate, ExerciseVCDelegate {
+extension WorkoutVC : UIScrollViewDelegate, ExerciseVCDelegate, FeelingsVCDelegate, WorkoutFinishedDelegate {
     
     func formatScrollView() {
         masterScrollView.delegate = self
@@ -112,6 +116,14 @@ extension WorkoutVC : UIScrollViewDelegate, ExerciseVCDelegate {
     
     func exerciseFinishedTapped(number: Int) {
         moveScrollViewTo(page: number + 1, animated: true)
+    }
+    
+    func tempButtonTapped() {
+        moveScrollViewTo(page: 2, animated: true)
+    }
+    
+    func workoutFinishedTapped() {
+        navigationController?.popToRootViewController(animated: true)
     }
 
 }

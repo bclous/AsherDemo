@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol WorkoutFinishedDelegate : class {
+    func workoutFinishedTapped()
+}
+
 class WorkoutFinishedVC: UIViewController {
+    
+    weak var delegate : WorkoutFinishedDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +27,9 @@ class WorkoutFinishedVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func tempWorkoutFinishedButtonTapped(_ sender: Any) {
+        delegate?.workoutFinishedTapped()
+    }
 
     /*
     // MARK: - Navigation

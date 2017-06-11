@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ControlMasterViewDelegate : class {
-    func isLastSetInExercise(_: Bool)
+    func isLastSetInExercise(_ lastSet: Bool)
 }
 
 class ExerciseSetControlMasterView: UIView {
@@ -30,7 +30,7 @@ class ExerciseSetControlMasterView: UIView {
     var currentPage = 1
     var controlViews : [ExerciseSetControlView] = []
     
-    weak var delegate :
+    weak var delegate : ControlMasterViewDelegate?
     
     
     override init(frame: CGRect) { // for using CustomView in code
@@ -59,6 +59,7 @@ class ExerciseSetControlMasterView: UIView {
         let currentView = controlViews[currentPage - 1]
         currentView.saveValuesToExerciseSet()
         adjustScrollView(toPage: currentPage - 1, animated: true)
+        delegate?.isLastSetInExercise(false)
         
         
     }
@@ -66,6 +67,8 @@ class ExerciseSetControlMasterView: UIView {
         let currentView = controlViews[currentPage - 1]
         currentView.saveValuesToExerciseSet()
         adjustScrollView(toPage: currentPage + 1, animated: true)
+        let lastPage = currentPage == numberOfSets
+        delegate?.isLastSetInExercise(lastPage)
     }
     
     public func formatMasterViewForExercise(_ exercise: Exercise, frameWidth: CGFloat) {
@@ -82,6 +85,7 @@ class ExerciseSetControlMasterView: UIView {
         }
         
         adjustLeftAndRightButtons()
+    
 
     }
     
@@ -98,6 +102,7 @@ class ExerciseSetControlMasterView: UIView {
         rightArrowImage.alpha = multipleSets ? 1 : 0
         leftButton.isEnabled = multipleSets
         rightButton.isEnabled = multipleSets
+        delegate?.isLastSetInExercise(!multipleSets)
     }
     
     private func createStackView() {

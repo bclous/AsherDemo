@@ -28,10 +28,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="clientGenericCell" rowHeight="76" id="7PA-7A-gcp" customClass="ClientGenericCell" customModule="AsherDemo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="376" height="76"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7PA-7A-gcp" id="Caj-dr-v6o">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ul-tQ-D7h">
@@ -107,21 +107,31 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kT2-Kk-co2">
+                                <rect key="frame" x="164.5" y="318" width="46" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="0.62168677350000001" blue="0.94418147860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tempButtonTapped:" destination="DLr-B1-tVb" eventType="touchUpInside" id="Yqg-pp-I04"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JhI-R7-FcF" firstAttribute="centerX" secondItem="aQ4-w3-B9i" secondAttribute="centerX" id="8As-xE-zOb"/>
                             <constraint firstItem="JhI-R7-FcF" firstAttribute="centerY" secondItem="aQ4-w3-B9i" secondAttribute="centerY" id="H9m-ZF-yg0"/>
+                            <constraint firstItem="kT2-Kk-co2" firstAttribute="centerX" secondItem="aQ4-w3-B9i" secondAttribute="centerX" id="HqY-Mo-H3a"/>
                             <constraint firstItem="JhI-R7-FcF" firstAttribute="height" secondItem="aQ4-w3-B9i" secondAttribute="height" id="Jmh-aG-kxF"/>
+                            <constraint firstItem="kT2-Kk-co2" firstAttribute="centerY" secondItem="aQ4-w3-B9i" secondAttribute="centerY" id="jwK-4b-0GU"/>
                             <constraint firstItem="JhI-R7-FcF" firstAttribute="width" secondItem="aQ4-w3-B9i" secondAttribute="width" id="yX2-S1-4rE"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mainTableView" destination="JhI-R7-FcF" id="DpB-94-GUj"/>
                         <segue destination="TOc-Li-gQa" kind="show" identifier="workoutSegue" id="waU-oX-w5E"/>
-                        <segue destination="WCy-fj-Yw9" kind="popoverPresentation" identifier="individualWorkoutSegue" id="DRd-3T-LBs">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
+                        <segue destination="WCy-fj-Yw9" kind="presentation" identifier="individualWorkoutSegue" id="DRd-3T-LBs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Gx-MX-DzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -208,7 +218,20 @@
                     <view key="view" contentMode="scaleToFill" id="JvW-9E-eq3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzJ-pJ-JeM">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tempWorkoutFinishedButtonTapped:" destination="99M-rM-Haw" eventType="touchUpInside" id="MJ8-Z5-6IB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.62168677350000001" blue="0.94418147860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TzJ-pJ-JeM" firstAttribute="centerY" secondItem="JvW-9E-eq3" secondAttribute="centerY" id="S8l-pW-OUx"/>
+                            <constraint firstItem="TzJ-pJ-JeM" firstAttribute="centerX" secondItem="JvW-9E-eq3" secondAttribute="centerX" id="njy-HO-E7k"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zi-qa-tXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -226,7 +249,20 @@
                     <view key="view" contentMode="scaleToFill" id="qHo-t3-rUc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwN-cB-GAc">
+                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tempButtonTapped:" destination="Kth-4g-IVF" eventType="touchUpInside" id="b8e-IC-232"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32549019610000002" green="0.63921568630000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wwN-cB-GAc" firstAttribute="centerY" secondItem="qHo-t3-rUc" secondAttribute="centerY" id="Mo8-lI-CKp"/>
+                            <constraint firstItem="wwN-cB-GAc" firstAttribute="centerX" secondItem="qHo-t3-rUc" secondAttribute="centerX" id="c8D-m7-TM2"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyQ-k0-frf" userLabel="First Responder" sceneMemberID="firstResponder"/>

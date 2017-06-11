@@ -12,7 +12,7 @@ protocol ExerciseVCDelegate : class {
     func exerciseFinishedTapped(number: Int)
 }
 
-class ExerciseVC: UIViewController {
+class ExerciseVC: UIViewController, ControlMasterViewDelegate {
     
     var exercise : Exercise?
     weak var delegate : ExerciseVCDelegate?
@@ -40,12 +40,16 @@ class ExerciseVC: UIViewController {
         self.exercise = exercise
         controlView.formatMasterViewForExercise(exercise, frameWidth: view.frame.width)
         tipsView.formatTipViewFor(exercise: exercise)
-        orderInWorkout = exercise.orderInWorkout
+        orderInWorkout = Int(exercise.orderInWorkout)
 
     }
     
     @IBAction func nextExerciseButtonTapped(_ sender: Any) {
-        delegate?.exerciseFinishedTapped(orderInWorkout)
+        delegate?.exerciseFinishedTapped(number: orderInWorkout)
+    }
+    
+    func isLastSetInExercise(_ lastSet: Bool) {
+        nextExerciseButton.isHidden = !lastSet
     }
     
     
