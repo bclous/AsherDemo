@@ -21,9 +21,9 @@ class DataStore: NSObject {
     
     func checkForFirstTime() {
         if UserDefaults.standard.value(forKey: "userExists") != nil {
-            //fetch
+         
         } else {
-            createClient()
+         //
         }
     }
     

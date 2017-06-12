@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E2193" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Client" representedClassName="Client" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String" syncable="YES"/>
         <relationship name="careTaker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="clients" inverseEntity="User" syncable="YES"/>
@@ -28,6 +28,7 @@
         <attribute name="isReps" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="isRightSide" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="isTimed" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="orderInExercise" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="repsCompleted" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="timeCompleted" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="userTitleHint" attributeType="String" syncable="YES"/>
@@ -45,7 +46,7 @@
     <elements>
         <element name="Client" positionX="-117" positionY="-315" width="128" height="88"/>
         <element name="Exercise" positionX="225" positionY="-297" width="128" height="270"/>
-        <element name="ExerciseSet" positionX="414" positionY="-279" width="128" height="178"/>
+        <element name="ExerciseSet" positionX="414" positionY="-279" width="128" height="195"/>
         <element name="User" positionX="-281" positionY="-315" width="128" height="73"/>
         <element name="Workout" positionX="52" positionY="-306" width="128" height="88"/>
     </elements>
