@@ -27,7 +27,8 @@ class ClientGenericCell: UITableViewCell {
     
     func formatCell(client: Client) {
         
-        // set stuff up
+        nameLabel.text = client.name
+        clientPicture.image = UIImage(named: client.name!)
         
     }
 

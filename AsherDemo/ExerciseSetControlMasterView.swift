@@ -26,7 +26,7 @@ class ExerciseSetControlMasterView: UIView {
     var exercise : Exercise?
     var frameWidth : CGFloat = 375
     var numberOfSets = 1
-    let mainStackView = UIStackView()
+    var mainStackView : UIStackView?
     var currentPage = 1
     var controlViews : [ExerciseSetControlView] = []
     
@@ -73,20 +73,14 @@ class ExerciseSetControlMasterView: UIView {
     
     public func formatMasterViewForExercise(_ exercise: Exercise, frameWidth: CGFloat) {
         self.frameWidth = frameWidth
-        
-        if let sets = exercise.sets {
-            let exerciseSets = sets.allObjects as! [ExerciseSet]
-            formatForSets(exerciseSets)
+        let exerciseSets = DataStore.shared.setsInOrder(exercise: exercise)
+        formatForSets(exerciseSets)
             createStackView()
-            
             for set in exerciseSets {
                 createControlViewForExerciseSet(set)
             }
-        }
         
         adjustLeftAndRightButtons()
-    
-
     }
     
     private func formatForSets(_ sets: [ExerciseSet]) {
@@ -106,21 +100,33 @@ class ExerciseSetControlMasterView: UIView {
     }
     
     private func createStackView() {
-        mainStackView.translatesAutoresizingMaskIntoConstraints = false
-        mainStackView.distribution = .fillEqually
-        masterScrollView.addSubview(mainStackView)
-        mainStackView.leftAnchor.constraint(equalTo: masterScrollView.leftAnchor)
-        mainStackView.rightAnchor.constraint(equalTo: masterScrollView.rightAnchor)
-        mainStackView.topAnchor.constraint(equalTo: masterScrollView.topAnchor)
-        mainStackView.bottomAnchor.constraint(equalTo: masterScrollView.bottomAnchor)
-        mainStackView.heightAnchor.constraint(equalTo: masterScrollView.heightAnchor)
-        mainStackView.widthAnchor.constraint(equalTo: masterScrollView.widthAnchor, multiplier: CGFloat(numberOfSets))
+        
+        mainStackView = UIStackView()
+        mainStackView?.alignment = .fill
+        
+        if let mainStackView = mainStackView {
+            mainStackView.translatesAutoresizingMaskIntoConstraints = false
+            mainStackView.distribution = .fillEqually
+            mainStackView.axis = .horizontal
+            masterScrollView.addSubview(mainStackView)
+            mainStackView.leftAnchor.constraint(equalTo: masterScrollView.leftAnchor).isActive = true
+            mainStackView.rightAnchor.constraint(equalTo: masterScrollView.rightAnchor).isActive = true
+            mainStackView.topAnchor.constraint(equalTo: masterScrollView.topAnchor).isActive = true
+            mainStackView.bottomAnchor.constraint(equalTo: masterScrollView.bottomAnchor).isActive = true
+            mainStackView.heightAnchor.constraint(equalTo: masterScrollView.heightAnchor).isActive = true
+            mainStackView.widthAnchor.constraint(equalTo: masterScrollView.widthAnchor, multiplier: CGFloat(numberOfSets)).isActive = true
+            layoutIfNeeded()
+        }
+    
     }
     
     private func createControlViewForExerciseSet(_ set: ExerciseSet) {
         let controlView = ExerciseSetControlView()
+        if let mainStackView = mainStackView {
+            mainStackView.addArrangedSubview(controlView)
+        }
         controlView.formatControlView(exercise: set)
-        mainStackView.addArrangedSubview(controlView)
+      
         controlViews.append(controlView)
     }
 
@@ -133,7 +139,7 @@ extension ExerciseSetControlMasterView : UIScrollViewDelegate {
     }
     
     func adjustScrollView(toPage page: Int, animated: Bool) {
-        let offset = CGFloat(page - 1) * frameWidth
+        let offset = CGFloat(page - 1) * (frameWidth - 40)
         let point = CGPoint(x: offset, y: 0)
         masterScrollView.setContentOffset(point, animated: animated)
         currentPage = page
@@ -146,8 +152,8 @@ extension ExerciseSetControlMasterView : UIScrollViewDelegate {
         
         leftButton.isEnabled = !firstSet
         rightButton.isEnabled = !lastSet
-        leftArrowImage.alpha = firstSet ? 0.3 : 1
-        rightArrowImage.alpha = lastSet ? 0.3 : 1
+        leftArrowImage.alpha = firstSet ? 0.2 : 0.5
+        rightArrowImage.alpha = lastSet ? 0.2 : 0.5
         
     }
 }

@@ -17,7 +17,7 @@ enum SampleExercise {
 
 class CoreDataClient: NSObject {
     
-    let shared = CoreDataClient()
+    static let shared = CoreDataClient()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func fetchUser() -> User? {
@@ -42,6 +42,8 @@ class CoreDataClient: NSObject {
         user.addToClients(client2)
         user.addToClients(client3)
         
+        saveContext()
+        
     }
     
     func sampleClient(name: String) -> Client {
@@ -53,7 +55,8 @@ class CoreDataClient: NSObject {
     
     func newWorkout() -> Workout {
         let workout = Workout(context: context)
-        workout.date = Date() as NSDate
+        workout.date = NSTimeIntervalSince1970
+        workout.isComplete = false
         
         let exercise1 = exerciseFromType(.seatedHipLifts)
         let exercise2 = exerciseFromType(.curlUps)
@@ -87,18 +90,19 @@ class CoreDataClient: NSObject {
             sampleExercise.isReps = false
             sampleExercise.isTimed = true
             sampleExercise.numberOfSets = 2
+            sampleExercise.videoURL = "www.google.com"
             
             let set1 = seatedHipLiftsSet(isLeft: true, orderInExercise: 1)
             let set2 = seatedHipLiftsSet(isLeft: false, orderInExercise: 2)
             let set3 = seatedHipLiftsSet(isLeft: true, orderInExercise: 3)
-            let set4 = seatedHipLiftsSet(isLeft: true, orderInExercise: 4)
+            let set4 = seatedHipLiftsSet(isLeft: false, orderInExercise: 4)
             sampleExercise.addToSets(set1)
             sampleExercise.addToSets(set2)
             sampleExercise.addToSets(set3)
             sampleExercise.addToSets(set4)
             
         case .curlUps:
-            sampleExercise.orderInWorkout = 1
+            sampleExercise.orderInWorkout = 2
             sampleExercise.suggestedRepsPersSet = 10
             sampleExercise.suggestedTimePerSet = 60
             sampleExercise.name = "Seated Hip Lifts"
@@ -111,6 +115,7 @@ class CoreDataClient: NSObject {
             sampleExercise.isReps = false
             sampleExercise.isTimed = true
             sampleExercise.numberOfSets = 2
+            sampleExercise.videoURL = "www.google.com"
             
             let set1 = curlUpsSet(orderInExercise: 1)
             let set2 = curlUpsSet(orderInExercise: 2)
@@ -118,7 +123,7 @@ class CoreDataClient: NSObject {
             sampleExercise.addToSets(set2)
         
         case .hipMarches:
-            sampleExercise.orderInWorkout = 1
+            sampleExercise.orderInWorkout = 3
             sampleExercise.suggestedRepsPersSet = 5
             sampleExercise.suggestedTimePerSet = 60
             sampleExercise.name = "Seated Hip Lifts"
@@ -131,6 +136,7 @@ class CoreDataClient: NSObject {
             sampleExercise.isReps = false
             sampleExercise.isTimed = true
             sampleExercise.numberOfSets = 2
+            sampleExercise.videoURL = "www.google.com"
             
             let set = hipMarchingSet(orderinExercise: 1)
             let set2 = hipMarchingSet(orderinExercise: 2)
@@ -138,7 +144,7 @@ class CoreDataClient: NSObject {
             sampleExercise.addToSets(set2)
             
         case .shoulderCircles:
-            sampleExercise.orderInWorkout = 1
+            sampleExercise.orderInWorkout = 4
             sampleExercise.suggestedRepsPersSet = 5
             sampleExercise.suggestedTimePerSet = 60
             sampleExercise.name = "Seated Hip Lifts"
@@ -151,6 +157,7 @@ class CoreDataClient: NSObject {
             sampleExercise.isReps = false
             sampleExercise.isTimed = true
             sampleExercise.numberOfSets = 2
+            sampleExercise.videoURL = "www.google.com"
             
             let set1 = shoulderRollsSet(orderInExercise: 1)
             let set2 = shoulderRollsSet(orderInExercise: 2)
@@ -165,9 +172,11 @@ class CoreDataClient: NSObject {
         let set = ExerciseSet(context: context)
         set.isLeftSide = isLeft
         set.isRightSide = !isLeft
+        set.isFullBody = false
         set.isTimed = true
         set.isReps = false
         set.orderInExercise = Int64(orderInExercise)
+        set.userTitleHint = "Let's go!"
         return set
     }
     
@@ -179,6 +188,7 @@ class CoreDataClient: NSObject {
         set.isTimed = false
         set.isReps = true
         set.orderInExercise = Int64(orderInExercise)
+        set.userTitleHint = "Let's go!"
         return set
     }
     
@@ -190,6 +200,7 @@ class CoreDataClient: NSObject {
         set.isTimed = false
         set.isReps = true
         set.orderInExercise = Int64(orderinExercise)
+        set.userTitleHint = "Let's go!"
         return set
     }
     
@@ -201,18 +212,12 @@ class CoreDataClient: NSObject {
         set.isTimed = false
         set.isReps = true
         set.orderInExercise = Int64(orderInExercise)
+        set.userTitleHint = "Let's go!"
         return set
     }
     
     func saveContext() {
-        do {
-            try context.save()
-        } catch {
-            // huh?
-        }
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
     }
     
-    
-    
-
 }

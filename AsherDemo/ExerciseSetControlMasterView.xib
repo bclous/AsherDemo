@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E2193" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,37 +26,37 @@
             <rect key="frame" x="0.0" y="0.0" width="373" height="151"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yDx-Um-ive">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_keyboard_arrow_left" translatesAutoresizingMaskIntoConstraints="NO" id="yDx-Um-ive">
                     <rect key="frame" x="2" y="63" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="25" id="VmW-DO-scK"/>
                         <constraint firstAttribute="height" constant="25" id="ejd-hh-uFA"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iWu-Ng-Iha">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_keyboard_arrow_right" translatesAutoresizingMaskIntoConstraints="NO" id="iWu-Ng-Iha">
                     <rect key="frame" x="346" y="63" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="AgJ-JQ-JJv"/>
                         <constraint firstAttribute="width" constant="25" id="RjB-xP-ax4"/>
                     </constraints>
                 </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdN-Aq-YfU">
+                    <rect key="frame" x="20" y="0.0" width="333" height="151"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwk-wA-UdG">
+                    <rect key="frame" x="341" y="43" width="35" height="65"/>
+                    <connections>
+                        <action selector="rightButtonTapped:" destination="-1" eventType="touchUpInside" id="Aps-AK-wjg"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GG9-9M-GPt">
                     <rect key="frame" x="-3" y="43" width="35" height="65"/>
                     <connections>
                         <action selector="leftButtonTapped:" destination="-1" eventType="touchUpInside" id="gHh-oC-rF5"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwk-wA-UdG">
-                    <rect key="frame" x="341" y="42.5" width="35" height="65"/>
-                    <connections>
-                        <action selector="rightButtonTapped:" destination="-1" eventType="touchUpInside" id="Aps-AK-wjg"/>
-                    </connections>
-                </button>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AdN-Aq-YfU">
-                    <rect key="frame" x="20" y="0.0" width="333" height="151"/>
-                </scrollView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstItem="gwk-wA-UdG" firstAttribute="width" secondItem="iWu-Ng-Iha" secondAttribute="width" constant="10" id="4yz-6x-xM1"/>
                 <constraint firstItem="GG9-9M-GPt" firstAttribute="centerY" secondItem="yDx-Um-ive" secondAttribute="centerY" id="AHr-8V-PS4"/>
@@ -79,4 +79,8 @@
             <point key="canvasLocation" x="-356.5" y="-396.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_keyboard_arrow_left" width="24" height="24"/>
+        <image name="ic_keyboard_arrow_right" width="24" height="24"/>
+    </resources>
 </document>

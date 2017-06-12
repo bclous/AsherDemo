@@ -39,7 +39,8 @@
         <relationship name="clients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Client" inverseName="careTaker" inverseEntity="Client" syncable="YES"/>
     </entity>
     <entity name="Workout" representedClassName="Workout" syncable="YES" codeGenerationType="class">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isComplete" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="client" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Client" inverseName="workouts" inverseEntity="Client" syncable="YES"/>
         <relationship name="exercises" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercise" inverseName="workout" inverseEntity="Exercise" syncable="YES"/>
     </entity>
@@ -48,6 +49,6 @@
         <element name="Exercise" positionX="225" positionY="-297" width="128" height="270"/>
         <element name="ExerciseSet" positionX="414" positionY="-279" width="128" height="195"/>
         <element name="User" positionX="-281" positionY="-315" width="128" height="73"/>
-        <element name="Workout" positionX="52" positionY="-306" width="128" height="88"/>
+        <element name="Workout" positionX="52" positionY="-306" width="128" height="105"/>
     </elements>
 </model>

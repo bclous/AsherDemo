@@ -11,10 +11,18 @@ import UIKit
 class ProviderVC: UIViewController {
 
     @IBOutlet weak var mainTableView: UITableView!
+    var user : User?
     var chosenClient : Client?
+    var clients : [Client] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        formatTableView()
+        user = DataStore.shared.user
+        if let user = user {
+            clients = DataStore.shared.clientsInOrder(user: user)
+            mainTableView.reloadData()
+        }
         
     }
     
@@ -24,6 +32,7 @@ class ProviderVC: UIViewController {
         if let client = chosenClient {
             destinationVC.client = client
         }
+    
     }
     
 
@@ -37,18 +46,18 @@ extension ProviderVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return clients.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "clientGenericCell", for: indexPath) as! ClientGenericCell
-        //cell.client =
-        //cell.formatCell(client: <#T##Client#>)
+        cell.formatCell(client: clients[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // do stuff
+        chosenClient = clients[indexPath.row]
+        performSegue(withIdentifier: "individualClientSegue", sender: self)
     }
     
 }

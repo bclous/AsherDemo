@@ -18,20 +18,23 @@ class ClientVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         if let client = client {
-            if let workouts = client.workouts {
-                clientWorkouts = workouts.allObjects as! [Workout]
-                todayWorkout = clientWorkouts.last
-            }
+            clientWorkouts = DataStore.shared.completedWorkoutsInOrder(client: client)
+            todayWorkout = DataStore.shared.newWorkout(client: client)
         }
         mainTableView.reloadData()
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "individualWorkoutSegue" {
-            let destinationVC = segue.destination as! IndividiualWorkoutVC
-            destinationVC.formatVC(workout: todayWorkout!)
+        if segue.identifier == "workoutSegue" {
+            let destinationVC = segue.destination as! WorkoutVC
+            destinationVC.workout = todayWorkout
     
         }
     }

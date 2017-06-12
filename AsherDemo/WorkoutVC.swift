@@ -32,36 +32,34 @@ class WorkoutVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: true)
 
         if let workout = workout {
+            exercises = DataStore.shared.exercisesInOrder(workout: workout)
             formatVC(workout: workout)
             screenWidth = view.frame.width
             formatScrollView()
             feelingsVC.delegate = self
             workoutFinishedVC.delegate = self
-            
         }
     }
     
     func formatVC(workout: Workout) {
         self.workout = workout
-        getExercises(workout: workout)
         formatExerciseVCs()
         constrainVCs()
     }
     
-    func getExercises(workout: Workout) {
-        if let workoutExercises = workout.exercises?.allObjects {
-            exercises = workoutExercises as! [Exercise]
-        }
-    }
-    
     func formatExerciseVCs() {
         if exercises.count >= 4 {
-            exercise1VC.formatExerciseVCWithExercise(exercises[0])
-            exercise2VC.formatExerciseVCWithExercise(exercises[1])
-            exercise3VC.formatExerciseVCWithExercise(exercises[2])
-            exercise4VC.formatExerciseVCWithExercise(exercises[3])
+            exercise1VC.exercise = exercises[0]
+            exercise1VC.screenWidth = screenWidth
+            exercise2VC.exercise = exercises[1]
+            exercise2VC.screenWidth = screenWidth
+            exercise3VC.exercise = exercises[2]
+            exercise3VC.screenWidth = screenWidth
+            exercise4VC.exercise = exercises[3]
+            exercise4VC.screenWidth = screenWidth
             exercise1VC.delegate = self
             exercise2VC.delegate = self
             exercise3VC.delegate = self
@@ -115,7 +113,7 @@ extension WorkoutVC : UIScrollViewDelegate, ExerciseVCDelegate, FeelingsVCDelega
     }
     
     func exerciseFinishedTapped(number: Int) {
-        moveScrollViewTo(page: number + 1, animated: true)
+        moveScrollViewTo(page: number + 2, animated: true)
     }
     
     func tempButtonTapped() {
@@ -123,7 +121,7 @@ extension WorkoutVC : UIScrollViewDelegate, ExerciseVCDelegate, FeelingsVCDelega
     }
     
     func workoutFinishedTapped() {
-        navigationController?.popToRootViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 
 }

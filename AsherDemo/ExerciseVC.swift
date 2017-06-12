@@ -15,6 +15,7 @@ protocol ExerciseVCDelegate : class {
 class ExerciseVC: UIViewController, ControlMasterViewDelegate {
     
     var exercise : Exercise?
+    var screenWidth : CGFloat = 375
     weak var delegate : ExerciseVCDelegate?
     
     @IBOutlet weak var nextExerciseButton: UIButton!
@@ -36,13 +37,7 @@ class ExerciseVC: UIViewController, ControlMasterViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func formatExerciseVCWithExercise(_ exercise: Exercise) {
-        self.exercise = exercise
-        controlView.formatMasterViewForExercise(exercise, frameWidth: view.frame.width)
-        tipsView.formatTipViewFor(exercise: exercise)
-        orderInWorkout = Int(exercise.orderInWorkout)
-
-    }
+    
     
     @IBAction func nextExerciseButtonTapped(_ sender: Any) {
         delegate?.exerciseFinishedTapped(number: orderInWorkout)
@@ -50,6 +45,15 @@ class ExerciseVC: UIViewController, ControlMasterViewDelegate {
     
     func isLastSetInExercise(_ lastSet: Bool) {
         nextExerciseButton.isHidden = !lastSet
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if let exercise = exercise {
+            controlView.formatMasterViewForExercise(exercise, frameWidth: screenWidth)
+            tipsView.formatTipViewFor(exercise: exercise)
+            orderInWorkout = Int(exercise.orderInWorkout)
+        }
     }
     
     
