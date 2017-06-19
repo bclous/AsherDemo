@@ -91,7 +91,7 @@ class ExerciseSetControlView: UIView {
             } else {
                 leftOrRightOrTimeOrRepsLabel.text = exerciseSet.isReps ? "REPS:" : "TIME:"
             }
-            startStopButton.backgroundColor = TTConstants.mainGreenColor
+            startStopButton.backgroundColor = TTConstants.mainYellowColor
             
             yourBestAmountLabel.text = exerciseSet.isReps ? "15" : "0:15"
             
@@ -125,7 +125,7 @@ class ExerciseSetControlView: UIView {
         if isClockRunning {
             timer.invalidate()
             startStopButton.setTitle("START", for: .normal)
-            startStopButton.backgroundColor = TTConstants.mainGreenColor
+            startStopButton.backgroundColor = TTConstants.mainYellowColor
             isClockRunning = false
         } else {
             startTimer()
