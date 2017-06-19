@@ -32,7 +32,6 @@ class ProviderVC: UIViewController {
         if let client = chosenClient {
             destinationVC.client = client
         }
-    
     }
     
 

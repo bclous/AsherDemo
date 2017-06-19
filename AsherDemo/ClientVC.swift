@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ClientVC: UIViewController {
     
     var client : Client?
@@ -28,12 +29,16 @@ class ClientVC: UIViewController {
         
     }
     
+    
     @IBAction func backButtonTapped(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
 
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
        // navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        let providerVC = navigationController?.viewControllers[0] as! ProviderVC
+        providerVC.mainTableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

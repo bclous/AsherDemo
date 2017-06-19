@@ -23,12 +23,14 @@ class ExerciseVC: UIViewController, ControlMasterViewDelegate {
     @IBOutlet weak var controlView: ExerciseSetControlMasterView!
     @IBOutlet weak var tipsView: ExerciseTipsView!
     var orderInWorkout = 1
+
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         controlView.delegate = self
         nextExerciseButton.layer.cornerRadius = 5
+        nextExerciseButton.backgroundColor = TTConstants.mainBlueColor
         
         
         // Do any additional setup after loading the view.
@@ -38,6 +40,8 @@ class ExerciseVC: UIViewController, ControlMasterViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+  
     
     
     

@@ -24,6 +24,7 @@ class FeelingsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         feelingChoicesPickerView.dataSource = self
         feelingChoicesPickerView.delegate = self
         startWorkoutButton.layer.cornerRadius = 10
+        startWorkoutButton.backgroundColor = TTConstants.mainYellowColor
 
         // Do any additional setup after loading the view.
     }

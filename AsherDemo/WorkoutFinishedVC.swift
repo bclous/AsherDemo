@@ -14,12 +14,15 @@ protocol WorkoutFinishedDelegate : class {
 
 class WorkoutFinishedVC: UIViewController {
     
+    @IBOutlet weak var finishedButton: UIButton!
     weak var delegate : WorkoutFinishedDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        finishedButton.backgroundColor = TTConstants.mainYellowColor
     }
 
     override func didReceiveMemoryWarning() {

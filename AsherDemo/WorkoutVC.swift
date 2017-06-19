@@ -89,7 +89,7 @@ class WorkoutVC: UIViewController {
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        navigationController?.popToViewController((navigationController?.viewControllers[1])!, animated: true)
     }
     
     
@@ -127,7 +127,7 @@ extension WorkoutVC : UIScrollViewDelegate, ExerciseVCDelegate, FeelingsVCDelega
     }
     
     func workoutFinishedTapped() {
-        dismiss(animated: true, completion: nil)
+        navigationController?.popToViewController((navigationController?.viewControllers[1])!, animated: true)
     }
     
     func updateHeaderViewForPage(_ page: Int) {

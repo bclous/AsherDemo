@@ -280,19 +280,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzJ-pJ-JeM">
-                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="30" y="597" width="315" height="40"/>
+                                <color key="backgroundColor" red="0.9552378654" green="0.0095015831049999992" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bES-j3-gWa"/>
+                                </constraints>
+                                <state key="normal" title="Finished">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="tempWorkoutFinishedButtonTapped:" destination="99M-rM-Haw" eventType="touchUpInside" id="MJ8-Z5-6IB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're Finished!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWW-MG-MTr">
+                                <rect key="frame" x="16" y="60" width="343" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.62168677350000001" blue="0.94418147860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TzJ-pJ-JeM" firstAttribute="centerY" secondItem="JvW-9E-eq3" secondAttribute="centerY" id="S8l-pW-OUx"/>
-                            <constraint firstItem="TzJ-pJ-JeM" firstAttribute="centerX" secondItem="JvW-9E-eq3" secondAttribute="centerX" id="njy-HO-E7k"/>
+                            <constraint firstItem="4xp-WC-x3p" firstAttribute="top" secondItem="TzJ-pJ-JeM" secondAttribute="bottom" constant="30" id="4H9-81-BYc"/>
+                            <constraint firstItem="QWW-MG-MTr" firstAttribute="leading" secondItem="JvW-9E-eq3" secondAttribute="leadingMargin" id="ECU-gB-R1O"/>
+                            <constraint firstItem="TzJ-pJ-JeM" firstAttribute="width" secondItem="JvW-9E-eq3" secondAttribute="width" constant="-60" id="UNQ-z4-7km"/>
+                            <constraint firstItem="QWW-MG-MTr" firstAttribute="top" secondItem="IvR-fh-t1c" secondAttribute="bottom" constant="40" id="aPO-Wf-SrW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QWW-MG-MTr" secondAttribute="trailing" id="dmN-BD-35j"/>
+                            <constraint firstItem="TzJ-pJ-JeM" firstAttribute="centerX" secondItem="JvW-9E-eq3" secondAttribute="centerX" id="uET-hW-JzQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="finishedButton" destination="TzJ-pJ-JeM" id="Shr-aa-7BY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zi-qa-tXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
