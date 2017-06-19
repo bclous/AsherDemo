@@ -17,6 +17,7 @@ class ClientVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //navigationController?.navigationBar.isHidden = true
         
         
         if let client = client {
@@ -27,8 +28,12 @@ class ClientVC: UIViewController {
         
     }
     
+    @IBAction func backButtonTapped(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(false, animated: true)
+       // navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

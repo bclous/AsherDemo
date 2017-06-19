@@ -49,6 +49,9 @@ class ExerciseTipsView: UIView {
         tip3Label.text = exercise.tip3
         tip4Label.text = exercise.tip4
         tipsLabel.text = "TIP TIP TIPS"
+        repsLabel.text = exercise.repsLabel
+        repsLabel.textColor = UIColor(colorLiteralRed: 219.0/255.0, green: 203.0/255.0, blue: 0/255.0, alpha: 1)
+        
         
         
     }

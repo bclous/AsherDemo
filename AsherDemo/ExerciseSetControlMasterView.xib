@@ -44,13 +44,13 @@
                     <rect key="frame" x="20" y="0.0" width="333" height="151"/>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwk-wA-UdG">
-                    <rect key="frame" x="341" y="43" width="35" height="65"/>
+                    <rect key="frame" x="331" y="43" width="55" height="65"/>
                     <connections>
                         <action selector="rightButtonTapped:" destination="-1" eventType="touchUpInside" id="Aps-AK-wjg"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GG9-9M-GPt">
-                    <rect key="frame" x="-3" y="43" width="35" height="65"/>
+                    <rect key="frame" x="-13" y="43" width="55" height="65"/>
                     <connections>
                         <action selector="leftButtonTapped:" destination="-1" eventType="touchUpInside" id="gHh-oC-rF5"/>
                     </connections>
@@ -58,9 +58,9 @@
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
-                <constraint firstItem="gwk-wA-UdG" firstAttribute="width" secondItem="iWu-Ng-Iha" secondAttribute="width" constant="10" id="4yz-6x-xM1"/>
+                <constraint firstItem="gwk-wA-UdG" firstAttribute="width" secondItem="iWu-Ng-Iha" secondAttribute="width" constant="30" id="4yz-6x-xM1"/>
                 <constraint firstItem="GG9-9M-GPt" firstAttribute="centerY" secondItem="yDx-Um-ive" secondAttribute="centerY" id="AHr-8V-PS4"/>
-                <constraint firstItem="GG9-9M-GPt" firstAttribute="width" secondItem="yDx-Um-ive" secondAttribute="width" constant="10" id="Ag7-Wg-gx8"/>
+                <constraint firstItem="GG9-9M-GPt" firstAttribute="width" secondItem="yDx-Um-ive" secondAttribute="width" constant="30" id="Ag7-Wg-gx8"/>
                 <constraint firstItem="GG9-9M-GPt" firstAttribute="centerX" secondItem="yDx-Um-ive" secondAttribute="centerX" id="Iek-yT-OCU"/>
                 <constraint firstItem="GG9-9M-GPt" firstAttribute="height" secondItem="yDx-Um-ive" secondAttribute="height" constant="40" id="N0F-Kk-hdo"/>
                 <constraint firstItem="iWu-Ng-Iha" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Trc-3q-5hn"/>

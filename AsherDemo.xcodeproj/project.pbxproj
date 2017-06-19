@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FC928361EF8513800DC780B /* TTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC928351EF8513800DC780B /* TTConstants.swift */; };
 		AB4183761EE9B980008E5E7F /* StackIndexViewButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4183751EE9B980008E5E7F /* StackIndexViewButtonView.swift */; };
 		AB4183781EE9B997008E5E7F /* StackIndexViewButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB4183771EE9B997008E5E7F /* StackIndexViewButtonView.xib */; };
 		AB41837A1EE9BAEF008E5E7F /* StackIndexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB4183791EE9BAEF008E5E7F /* StackIndexView.xib */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FC928351EF8513800DC780B /* TTConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTConstants.swift; sourceTree = "<group>"; };
 		AB4183751EE9B980008E5E7F /* StackIndexViewButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackIndexViewButtonView.swift; sourceTree = "<group>"; };
 		AB4183771EE9B997008E5E7F /* StackIndexViewButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StackIndexViewButtonView.xib; sourceTree = "<group>"; };
 		AB4183791EE9BAEF008E5E7F /* StackIndexView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StackIndexView.xib; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				AB5FD2401EE7407000AC2A9D /* AppDelegate.swift */,
 				AB5FD2441EE7407000AC2A9D /* Main.storyboard */,
+				0FC928351EF8513800DC780B /* TTConstants.swift */,
 				AB41839D1EEB29E8008E5E7F /* DataStore.swift */,
 				AB41839F1EEB3653008E5E7F /* CoreDataClient.swift */,
 				AB5FD26B1EE74D3100AC2A9D /* View Controllers */,
@@ -251,6 +254,7 @@
 				AB41837C1EE9BBC0008E5E7F /* StackIndexView.swift in Sources */,
 				AB5FD25A1EE7417100AC2A9D /* ExerciseVC.swift in Sources */,
 				AB5FD2651EE74CA300AC2A9D /* WorkoutCell.swift in Sources */,
+				0FC928361EF8513800DC780B /* TTConstants.swift in Sources */,
 				AB5FD2431EE7407000AC2A9D /* ProviderVC.swift in Sources */,
 				AB4183761EE9B980008E5E7F /* StackIndexViewButtonView.swift in Sources */,
 				AB5FD26F1EE7542300AC2A9D /* IndividiualWorkoutVC.swift in Sources */,

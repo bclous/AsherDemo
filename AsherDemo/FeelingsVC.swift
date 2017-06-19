@@ -12,12 +12,18 @@ protocol FeelingsVCDelegate : class {
     func tempButtonTapped()
 }
 
-class FeelingsVC: UIViewController {
+class FeelingsVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    @IBOutlet weak var startWorkoutButton: UIButton!
+    @IBOutlet weak var feelingChoicesPickerView: UIPickerView!
     weak var delegate : FeelingsVCDelegate?
+    let feelings = ["I feel great!", " A little achey, but I'm ok", "I'm huring, let's take it easy", "In pain, let's skip today"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        feelingChoicesPickerView.dataSource = self
+        feelingChoicesPickerView.delegate = self
+        startWorkoutButton.layer.cornerRadius = 10
 
         // Do any additional setup after loading the view.
     }
@@ -29,6 +35,18 @@ class FeelingsVC: UIViewController {
     
     @IBAction func tempButtonTapped(_ sender: Any) {
         delegate?.tempButtonTapped()
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 4
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return feelings[row]
     }
 
     /*

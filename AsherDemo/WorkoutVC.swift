@@ -26,6 +26,7 @@ class WorkoutVC: UIViewController {
     let exercise4VC : ExerciseVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "exerciseVC") as! ExerciseVC
     let workoutFinishedVC : WorkoutFinishedVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "workoutFinishedVC") as! WorkoutFinishedVC
     
+    @IBOutlet weak var headerLabel: UILabel!
     var workout : Workout?
     var exercises : [Exercise] = []
     var screenWidth : CGFloat = 375
@@ -41,6 +42,7 @@ class WorkoutVC: UIViewController {
             formatScrollView()
             feelingsVC.delegate = self
             workoutFinishedVC.delegate = self
+            headerLabel.text = "Daily Feels"
         }
     }
     
@@ -86,6 +88,9 @@ class WorkoutVC: UIViewController {
         view1.bottomAnchor.constraint(equalTo: view2.bottomAnchor).isActive = true
     }
     
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     
 
@@ -110,6 +115,7 @@ extension WorkoutVC : UIScrollViewDelegate, ExerciseVCDelegate, FeelingsVCDelega
     func moveScrollViewTo(page: Int, animated: Bool) {
         let point = CGPoint(x: screenWidth * CGFloat((page - 1)), y: 0)
         masterScrollView.setContentOffset(point, animated: animated)
+        updateHeaderViewForPage(page)
     }
     
     func exerciseFinishedTapped(number: Int) {
@@ -121,7 +127,26 @@ extension WorkoutVC : UIScrollViewDelegate, ExerciseVCDelegate, FeelingsVCDelega
     }
     
     func workoutFinishedTapped() {
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func updateHeaderViewForPage(_ page: Int) {
+        switch page {
+        case 1:
+            headerLabel.text = "Daily Feels"
+        case 2:
+            headerLabel.text = "Seated Lifts"
+        case 3:
+            headerLabel.text = "Curl Ups"
+        case 4:
+            headerLabel.text = "Hip Marching"
+        case 5:
+            headerLabel.text = "Shoulder Rolls"
+        case 6:
+            headerLabel.text = "Finished!"
+        default:
+            headerLabel.text = "Workout"
+        }
     }
 
 }

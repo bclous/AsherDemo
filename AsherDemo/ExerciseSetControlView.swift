@@ -19,6 +19,9 @@ class ExerciseSetControlView: UIView {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var startStopButton: UIButton!
+    @IBOutlet weak var yourBestView: UIView!
+    @IBOutlet weak var yourBestContainerView: UIView!
+    
     let timer = Timer()
     var counter : Int = 0
     var numberOfReps = 0
@@ -58,6 +61,10 @@ class ExerciseSetControlView: UIView {
             thisSetLabel.text = "THIS SET:"
             thisSetDescriptionLabel.text = exerciseSet.userTitleHint
             timeOrRepsLabel.text = exerciseSet.isReps ? "0" : "0:00"
+            resetButton.layer.cornerRadius = 5
+            startStopButton.layer.cornerRadius = 5
+            yourBestContainerView.layer.cornerRadius = 5
+            thisSetDescriptionLabel.text = exerciseSet.isReps ? "Do as many as feels right" : "Hold for as long as feels right"
             
             if exerciseSet.isLeftSide {
                 leftOrRightOrTimeOrRepsLabel.text = "L:"
@@ -70,7 +77,6 @@ class ExerciseSetControlView: UIView {
             yourBestAmountLabel.text = exerciseSet.isReps ? "15" : "0:15"
             
         }
-
     }
     
     public func saveValuesToExerciseSet() {
@@ -88,5 +94,9 @@ class ExerciseSetControlView: UIView {
         
     }
 
+    @IBAction func startStopTapped(_ sender: Any) {
+    }
 
+    @IBAction func resetTapped(_ sender: Any) {
+    }
 }

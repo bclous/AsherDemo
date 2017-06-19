@@ -14,6 +14,7 @@ protocol ExerciseVCDelegate : class {
 
 class ExerciseVC: UIViewController, ControlMasterViewDelegate {
     
+    @IBOutlet weak var webView: UIWebView!
     var exercise : Exercise?
     var screenWidth : CGFloat = 375
     weak var delegate : ExerciseVCDelegate?
@@ -27,6 +28,7 @@ class ExerciseVC: UIViewController, ControlMasterViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         controlView.delegate = self
+        nextExerciseButton.layer.cornerRadius = 5
         
         
         // Do any additional setup after loading the view.
@@ -53,6 +55,10 @@ class ExerciseVC: UIViewController, ControlMasterViewDelegate {
             controlView.formatMasterViewForExercise(exercise, frameWidth: screenWidth)
             tipsView.formatTipViewFor(exercise: exercise)
             orderInWorkout = Int(exercise.orderInWorkout)
+            let url = "<iframe width=\"\(webView.frame.width)\" height=\"\(webView.frame.height)\" src=\"https://www.youtube.com/embed/\(exercise.videoURL!)?&playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>"
+            webView.allowsInlineMediaPlayback = true
+            webView.loadHTMLString(url, baseURL: nil)
+            
         }
     }
     
